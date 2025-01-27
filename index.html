@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    <script src="./script/script.js" defer></script>
+</head>
+<body>
+  <nav id="navbar-1" class="fixed-top navbar px-3">
+    <a class="navbar-brand" href="index.html">Ferrin-Y</a>
+  </nav>
+  <header>
+    <h3>Space Shooter</h3>
+    <!-- Author: Ferrin Yesudasan
+         Verion: 1.2 -->
+  </header>
+
+  <div class="container">
+    <div class="gameZone">
+
+       <svg id="board" width="420" height="525" viewbox="0,0,800,1000">
+       </svg>
+       <div class="buttons"><button class="psuedo" id="lb"> <span class="pc">⮜ ⮜ ⮜ ⮜</span><span class="mob">◀ ◀ ◀ ◀</span></button><button class="psuedo" id="rb"><span class="mob">▶ ▶ ▶ ▶</span><span class="pc">⮞ ⮞ ⮞ ⮞</span></button></div>
+   </div>
+   <div class="SidePanel">
+    <div id="accordion" >
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              How to play?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+          <div class="card-body">
+            <ul>
+              <li>Click <span class="psuedoButton">Start</span> to play</li>
+              <li>Use <span class="psuedoButton"><span class="pc">⮜ ⮜ ⮜ ⮜</span><span class="mob">◀ ◀ ◀ ◀</span></span> and <span class="psuedoButton"><span class="pc">⮞ ⮞ ⮞ ⮞</span><span class="mob">▶ ▶ ▶ ▶</span></span> button to navigate the ship.</li>
+              <li>Additionally, you can use Keyboard <span class="keyB">🡰</span> and <span class="keyB">🡲</span> to navigate.</li>
+              <li>Face alien to shoot it down.</li>
+              <li>Avoid Head-on collision with Alien</li>
+              <li>Destroy alien ships to rack up score.</li>
+              <li>Have Fun! :D</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+      
+   </div>
+   <div class="panel">
+    <p>
+      <button class="psuedoButton"id="start">Start</button>
+    
+      <button id="colorChange" class="psuedoButton">Change Color</button>
+    </p>
+    <hr>
+    <p>
+      <span id="scoreboard">
+          <span class="score">Score: <span id="score">0</span></span>
+          <span class="timer">Time: <span id="timer">0</span> ms</span>
+      </span>
+    </p>
+    <hr>
+
+   
+  </div>
+  </div>
+    
+
+     <div class="modal fade" id="pop" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLabel">Game Over</h5>
+              <button type="button" class="close keyB" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h4>Score: <span id="score-final">0</span></h4>
+              Restart or Move around the ship
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">See Around</button>
+              <button type="button" id="restart" data-bs-dismiss="modal" class="btn btn-primary">Restart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg bg-dark" id="foot">
+        
+        <p>&copy; <span id="year"></span>,  Space Shooter <br>Author: Ferrin Yesudasan</p>
+    </footer>
+</body>
+</html>
