@@ -24,7 +24,7 @@ let bulletCount = 30;      // Maximum number of bullets
 let bulletW = 10;          // Width of a bullet
 let bulletH = 30;          // Height of a bullet
 const svg = document.getElementById("board"); // SVG game board element
-var bulletimg = './media/bullet.svg'; // Path to the bullet image
+var bulletimg = './media/Bullet.svg'; // Path to the bullet image
 
 /**
  * Creates a star element with randomized attributes.
@@ -495,6 +495,7 @@ function gameStart() {
 /**
  * Event listener for changing the color of the ship.
  */
+let t = 1;
 document.getElementById('colorChange').addEventListener('click', function (e) {
     switch (t) {
         case 1:
