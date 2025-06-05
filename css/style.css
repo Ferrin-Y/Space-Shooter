@@ -1,7 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Outfit:wght@100..900&display=swap');
+
+
+:root {
+/* Primary Colors */
+    --color-primary: 216, 224, 240;      
+    --color-secondary: 163, 185, 230; 
+}
+
 *{
     font-family: 'Lilita One', sans-serif;
     user-select: none;
 }
+
+
+    .navbar {
+        background: rgba(0, 0, 0, 0.1) !important;
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(0,0,0, 0.1);
+        padding: 1rem 2rem;
+        z-index: 2;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        font-family: 'Lilita One', sans-serif;
+        color: rgb(var(--color-primary)) !important;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        letter-spacing: 1px;
+    }
+
+    .navbar-brand:hover {
+        color: rgb(var(--color-secondary)) !important;
+        transform: translateY(-1px);
+    }
+
+    .navbar-brand::before {
+        content: '';
+        margin-right: 8px;
+    }
+
+    .navbar-brand i {
+        margin-right: 8px;
+        font-size: 1.1em;
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+    }
+
+    .nav-link {
+        font-family: 'Outfit', sans-serif;
+        color: rgb(var(--color-primary)) !important;
+        font-weight: 500;
+        font-size: 1.1rem;
+        text-decoration: none;
+        padding: 0.5rem 1rem !important;
+        border-radius: 12px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, transparent, transparent);
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            transparent, 
+            rgba(var(--color-primary), 0.2), 
+            rgba(var(--color-secondary), 0.2),
+            transparent);
+        transition: left 0.6s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+        transition: all 0.4s ease;
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover {
+        color: rgb(var(--color-secondary)) !important;
+        background: rgba(var(--color-primary), 0.05);
+        transform: translateY(-3px) scale(1.04);
+        box-shadow: 0 8px 25px rgba(var(--color-primary), 0.25);
+        text-shadow: 0 0 20px rgba(var(--color-primary), 0.5);
+    }
+
+    .nav-link:hover::before {
+        left: 100%;
+    }
+
+    .nav-link:hover::after {
+        width: 80%;
+    }
+
 
 #board {
     border:4px solid white; 
@@ -44,6 +151,11 @@
 header{
     margin-top: 60px;
     text-align: center;
+   
+}
+
+header h3{
+    z-index: 4 !important;
 }
 
 .container{
@@ -72,6 +184,13 @@ header{
     padding: 3px;
 }
 
+.buttons{
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none;
+}
+
 .buttons button:first-child{
     border-radius: 40px 0  0 40px;
 }
@@ -82,7 +201,6 @@ header{
 
 .psuedoButton{
     display: inline-block;
-
     padding: 0 20px;
 }
 
@@ -103,15 +221,14 @@ header{
 
 button{
     background-color: black;
-    
 }
 
 h5 button{
-    color: aliceblue !important;
+    color: rgb(var(--color-primary)) !important;
 }
 
 h5 button:hover{
-    color: rgb(177, 208, 235) !important;
+    color: rgb(var(--color-secondary)) !important;
 }
 
 #accordion ul li{
@@ -140,12 +257,15 @@ h5 button:hover{
     color: aliceblue !important;
 }
 
+
+
 footer{
     position: fixed;
     bottom: 0;
     width: 100%;
     padding: 0 10px;
     text-align: center;
+    backdrop-filter: blur(5px);
 }
 
 footer p{

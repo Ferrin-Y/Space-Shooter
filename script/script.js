@@ -448,8 +448,8 @@ function gameStart() {
                 let life = parseInt(alien.getAttribute('life'));
                 if ((y > 0) && topCollision(alien, bullet) && (bullet != null)) {
                     alien.style.fill = "rgb(255,0,0)";
-                    bulletList.splice(bulletList.indexOf(bullet), 1);
                     svg.removeChild(bullet);
+                    bulletList.splice(bulletList.indexOf(bullet), 1);
                     life--;
                     alien.setAttribute('life', life);
                     scoreUpdate(10);

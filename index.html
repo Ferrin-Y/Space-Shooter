@@ -6,15 +6,25 @@
     <title>Space Shooter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./media/ship.svg">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    <script src="./script/script.js" defer></script>
 </head>
 <body>
-  <nav id="navbar-1" class="fixed-top navbar px-3">
-    <a class="navbar-brand" href="index.html">Ferrin-Y</a>
-  </nav>
+<nav id="navbar-1" class="fixed-top navbar">
+        <a class="navbar-brand" href="https://github.com/Ferrin-Y" target="_blank">
+            <i class="bi bi-github"></i>Ferrin-Y
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="https://linkedin.com/in/ferrin-yesudasan" target="_blank">
+                    Ferrin Yesudasan
+                </a>
+            </li>
+        </ul>
+    </nav>
   <header>
     <h3>Space Shooter</h3>
     <!-- Author: Ferrin Yesudasan
@@ -26,7 +36,7 @@
 
        <svg id="board" width="420" height="525" viewbox="0,0,800,1000">
        </svg>
-       <div class="buttons"><button class="psuedo" id="lb"> <span class="pc">⮜ ⮜ ⮜ ⮜</span><span class="mob">◀ ◀ ◀ ◀</span></button><button class="psuedo" id="rb"><span class="mob">▶ ▶ ▶ ▶</span><span class="pc">⮞ ⮞ ⮞ ⮞</span></button></div>
+       <div class="buttons" oncontextmenu="return false;"><button class="psuedo" id="lb"> <span class="pc">⮜ ⮜ ⮜ ⮜</span><span class="mob">◀ ◀ ◀ ◀</span></button><button class="psuedo" id="rb"><span class="mob">▶ ▶ ▶ ▶</span><span class="pc">⮞ ⮞ ⮞ ⮞</span></button></div>
    </div>
    <div class="SidePanel">
     <div id="accordion" >
@@ -96,9 +106,9 @@
         </div>
       </div>
 
-      <footer class="bg bg-dark" id="foot">
+      <footer id="foot">
         
-        <p>&copy; <span id="year"></span>,  Space Shooter <br>Author: Ferrin Yesudasan</p>
+        <p>&copy; <span id="year"></span>,  Space Shooter, Ferrin Yesudasan</p>
     </footer>
 </body>
-</html>
+</html> 
